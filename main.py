@@ -9,6 +9,8 @@ class Max:
     def respond(self, user_input):
         if self.similarity(user_input.lower(), "hi") > 0.8:
             return "Hey, buddy..."
+        elif self.similarity(user_input.lower(), "hello") > 0.8:
+            return "Hello there."
         elif self.similarity(user_input.lower(), "who are you") > 0.8:
             return "I am a simple AI program."
         elif self.similarity(user_input.lower(), "when did you made") > 0.8:

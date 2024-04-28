@@ -4,19 +4,30 @@ from difflib import SequenceMatcher
 class Max:
     def __init__(self):
         self.creation_date = datetime.date(2024, 4, 26)
-        self.creator = "ChatGPT"
+        self.name="Max"
+        self.creator = "Dulanga Dasanayake"
 
     def respond(self, user_input):
         if self.similarity(user_input.lower(), "hi") > 0.8:
             return "Hey, buddy..."
         elif self.similarity(user_input.lower(), "hello") > 0.8:
             return "Hello there."
+        elif self.similarity(user_input.lower(), "what is your name") > 0.8:
+            return "I am " + str(self.name) + "."
+        elif self.similarity(user_input.lower(), "how old are you") > 0.8:
+            return "I am Just Born."
         elif self.similarity(user_input.lower(), "who are you") > 0.8:
-            return "I am a simple AI program."
+            return "I am a simple AI program written by python."
+        elif self.similarity(user_input.lower(), "can you create pictures") > 0.8:
+            return "No."
         elif self.similarity(user_input.lower(), "when did you made") > 0.8:
-            return "I was made on " + str(self.creation_date) + "."
+            return "I was made on " + self.creation_date + "."
         elif self.similarity(user_input.lower(), "who made you") > 0.8:
             return "I was made by " + self.creator + "."
+        elif self.similarity(user_input.lower(), "what colour is the sky") > 0.8:
+            return "Blue."
+        elif self.similarity(user_input.lower(), "colour of sky") > 0.8:
+            return "Blue."
         else:
             return "There seems to be a problem. I couldn't understand your input."
 
@@ -25,7 +36,7 @@ class Max:
 
 def main():
     ai = Max()
-    print("Welcome! You can interact with the Max AI program.")
+    print("Welcome! Now You can interact with the Max AI program.")
     print("Type 'quit' to exit.")
     while True:
         user_input = input("You: ")
@@ -33,7 +44,7 @@ def main():
             print("Goodbye!")
             break
         response = ai.respond(user_input)
-        print("Max AI: " + response)
+        print("Max: " + response)
 
 if __name__ == "__main__":
     main()

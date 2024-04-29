@@ -49,10 +49,10 @@ class Max:
 def main():
     ai = Max()
     print("Welcome! Now You can chat with the Max")
-    print("Type 'quit' to exit.")
+    print("Type 'exit' to exit.")
     while True:
         user_input = input("You: ")
-        if user_input.lower() == "quit":
+        if user_input.lower() == "exit":
             print("Goodbye!")
             break
         response = ai.respond(user_input)

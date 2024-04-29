@@ -28,6 +28,18 @@ class Max:
             return "Blue."
         elif self.similarity(user_input.lower(), "colour of sky") > 0.8:
             return "Blue."
+        elif self.similarity(user_input.lower(), "planet") > 0.8:
+            return "Our planet is earth."
+        elif self.similarity(user_input.lower(), "h") > 0.8:
+            return "Hello How Are You.."
+        elif self.similarity(user_input.lower(), "i") > 0.8:
+            return "Hello How Are You.."
+        elif self.similarity(user_input.lower(), "i am fine, thanks you") > 0.8:
+            return "I am Happy to here that.."
+        elif self.similarity(user_input.lower(), "i'm fine") > 0.8:
+            return "I am Happy to here that.."
+        elif self.similarity(user_input.lower(), "how are you") > 0.8:
+            return "I am Just Fine.. How About You.."
         else:
             return "There seems to be a problem. I couldn't understand your input."
 

@@ -48,7 +48,7 @@ class Max:
 
 def main():
     ai = Max()
-    print("Welcome! Now You can interact with the Max AI program.")
+    print("Welcome! Now You can chat with the Max")
     print("Type 'quit' to exit.")
     while True:
         user_input = input("You: ")
